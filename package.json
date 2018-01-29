@@ -29,6 +29,7 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint --fix src docs webpack.config.js",
     "semantic-release": "semantic-release",
+    "storybook": "start-storybook -p 8001 -c .storybook",
     "travis-deploy-once": "travis-deploy-once",
     "test": "cross-env NODE_ENV=test ava",
     "test:cov": "rimraf .nyc_output && nyc npm test"
@@ -43,6 +44,7 @@
     "react-simple-dropdown": "^3.2.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.11",
     "ava": "^0.25.0",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.0.0",
