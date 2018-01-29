@@ -1,8 +1,8 @@
-import { configure } from '@storybook/react';
+import * as storybook from '@storybook/react'
+import { setOptions } from '@storybook/addon-options'
 
-function loadStories() {
-  require('./stories/index.js');
-  // You can require as many stories as you need.
-}
+setOptions({
+  showAddonPanel: false
+})
 
-configure(loadStories, module);
+storybook.configure(() => require('./stories'), module)

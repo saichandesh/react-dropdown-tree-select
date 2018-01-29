@@ -1,8 +1,8 @@
-import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
 import ReactDropdownTreeSelect from '../../src'
+import SandboxEmbed from '../SandboxEmbed'
 
 import data from '../../docs/demo-data.json'
 
@@ -20,12 +20,9 @@ storiesOf('React Dropdown Tree Select', module)
       className="mdl-demo"
     />
   ))
-  .add('Styled With Bootstrap', () => (
-    <ReactDropdownTreeSelect
-      data={data}
-      onChange={onChange}
-      onAction={onAction}
-      onNodeToggle={onNodeToggle}
-      className="mdl-demo"
-    />
-  ));
+  .add('Select All, Unselect All Buttons HOC', () => (
+    <SandboxEmbed id="n348v2qox0" />
+  ))
+  .add('Prevent re-rendering as a child component', () => (
+    <SandboxEmbed id="v05klkn56l" />
+  ))
